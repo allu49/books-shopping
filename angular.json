@@ -1,0 +1,174 @@
+{
+  "version": 1,
+  "projects": {
+    "books-shopping": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/books-shopping",
+      "sourceRoot": "apps/books-shopping/src",
+      "prefix": "books-shopping",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/books-shopping",
+            "index": "apps/books-shopping/src/index.html",
+            "main": "apps/books-shopping/src/main.ts",
+            "polyfills": "apps/books-shopping/src/polyfills.ts",
+            "tsConfig": "apps/books-shopping/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/books-shopping/src/favicon.ico",
+              "apps/books-shopping/src/assets"
+            ],
+            "styles": ["apps/books-shopping/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/books-shopping/src/environments/environment.ts",
+                  "with": "apps/books-shopping/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "books-shopping:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "books-shopping:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "books-shopping:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/books-shopping/tsconfig.app.json",
+              "apps/books-shopping/tsconfig.spec.json",
+              "apps/books-shopping/tsconfig.editor.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/books-shopping/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/books-shopping/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "books-shopping-e2e": {
+      "root": "apps/books-shopping-e2e",
+      "sourceRoot": "apps/books-shopping-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/books-shopping-e2e/cypress.json",
+            "tsConfig": "apps/books-shopping-e2e/tsconfig.e2e.json",
+            "devServerTarget": "books-shopping:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "books-shopping:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/books-shopping-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/books-shopping-e2e/**/*"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/workspace": {
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/cypress": {
+      "cypress-project": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/node": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/nest": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/express": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "books-shopping"
+}
