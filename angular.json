@@ -25,7 +25,9 @@
               "apps/books-shopping/src/favicon.ico",
               "apps/books-shopping/src/assets"
             ],
-            "styles": ["apps/books-shopping/src/styles.scss"],
+            "styles": [
+              "apps/books-shopping/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -84,7 +86,10 @@
               "apps/books-shopping/tsconfig.spec.json",
               "apps/books-shopping/tsconfig.editor.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/books-shopping/**/*"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/books-shopping/**/*"
+            ]
           }
         },
         "test": {
@@ -117,15 +122,20 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/books-shopping-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/books-shopping-e2e/**/*"]
+            "tsConfig": [
+              "apps/books-shopping-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/books-shopping-e2e/**/*"
+            ]
           }
         }
       }
     }
   },
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@ngrx/schematics"
   },
   "schematics": {
     "@nrwl/workspace": {
