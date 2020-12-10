@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchService } from './shopping-books/search/search.service';
 
-
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule,HttpClientModule,BrowserAnimationsModule,AppRoutingModule, NoopAnimationsModule

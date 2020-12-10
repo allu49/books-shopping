@@ -9,8 +9,8 @@
     <mat-sidenav mode="side" [opened]="status">
         <mat-nav-list>
             <a mat-list-item [routerLink]="'/search'"> <mat-icon>search</mat-icon> Search</a>
-            <a mat-list-item  [routerLink]="'/cart'"> <mat-icon [matBadge]="count">shopping_cart</mat-icon> Cart</a>
-            <a mat-list-item  [routerLink]="'/collection'"> <mat-icon >library_books</mat-icon> MyCollection</a>
+            <a mat-list-item  [routerLink]="'/cart'"> <mat-icon [matBadge]="count" matBadgePosition="above before" matBadgeColor="accent">shopping_cart</mat-icon> Cart</a>
+            <a mat-list-item  [routerLink]="'/collection'"> <mat-icon [matBadge]="collectionCount" matBadgePosition="above before" matBadgeColor="accent">library_books</mat-icon> MyCollection</a>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content >

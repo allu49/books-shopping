@@ -1,12 +1,10 @@
 div{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     margin-top: 60px;
 mat-card{
     height: 400 px;
-    width: 900px;
-    margin-top: 12px;
-    margin-left: 100px;
+    width: 700px;
     .desc{
         text-align: justify;
         font-size: 15px;
@@ -20,10 +18,20 @@ mat-card{
            height: 60px;
        }
    }
-  
-}
-.footer{
-   
+   .footer{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top:10px;
+    button{
+        background-color: #e75480;
+        color: white;
+        margin-left:5px;
+    }
+    .buyButton{
+        margin-left: 12px;
+    }
+   }
 
 }
 }

@@ -26,6 +26,7 @@
               "apps/books-shopping/src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "apps/books-shopping/src/styles.scss"
             ],
             "scripts": []

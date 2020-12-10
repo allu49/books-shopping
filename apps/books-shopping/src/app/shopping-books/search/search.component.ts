@@ -19,9 +19,11 @@ export class SearchComponent  {
    }
    onSearchBook(){
    this._search.getBooks(this.searchvalue).subscribe(data=>this.books=data.items);
+   console.log(JSON.stringify(this.books));
 
    }
    bookSelected(id:string){
-     this.router.navigate(['/book-details',id])
+     let searchValue=this.searchvalue;
+     this.router.navigate(['/book-details',id,searchValue])
    }
 }
