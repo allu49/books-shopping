@@ -1,6 +1,6 @@
-<div  *ngIf="books">
-    <mat-card  #book *ngFor="let book of books">
-      <span class="header">
+<div *ngIf="books">
+  <mat-card #book *ngFor="let book of books">
+    <!-- <span class="header">
       <h2>{{book.volumeInfo.title}}</h2>
       <img [src]="book.volumeInfo.imageLinks.smallThumbnail">
     </span>
@@ -13,11 +13,13 @@
     <p class="desc">{{book.volumeInfo.description}}</p><br>
     <span>
       <p><b>Written By:</b> <br>{{book.volumeInfo.publisher}}</p>
-    </span>
+    </span> -->
+    <books-shopping-shared [book]="book" [cart]="cart"></books-shopping-shared>
     <span class="footer">
       <button mat-raised-button (click)="addToCart(book)">AddToCart</button>
-      <button class="buyButton" (click)="purchaseBook(book)" mat-raised-button>Buy</button>
+      <button class="buyButton" (click)="purchaseBook(book)" mat-raised-button>
+        Buy
+      </button>
     </span>
-    </mat-card>
-
+  </mat-card>
 </div>

@@ -1,26 +1,26 @@
 <div>
-<p>
+  <p>
     <mat-form-field appearance="legacy">
       <mat-label>Search in Library</mat-label>
-      <input matInput [(ngModel)]="searchvalue" >
+      <input matInput [(ngModel)]="searchvalue" />
       <mat-icon (click)="onSearchBook()" matSuffix>search</mat-icon>
     </mat-form-field>
   </p>
 
-    <div   class="main" *ngIf="books">
-     <mat-card (click)="bookSelected(item.id)" class="container"  *ngFor="let item of books">
-    <div class="header">
-     <h3>{{item.volumeInfo.title}}</h3>
-      <img [src]="item.volumeInfo.imageLinks.smallThumbnail">
-    </div><br>
-      {{item.volumeInfo.description}}<br>
-      <p>Written By: </p>
-        <p>{{item.volumeInfo.publisher}}</p>
-      </mat-card>
+  <div class="main" *ngIf="books">
+    <mat-card
+      (click)="bookSelected(item.id)"
+      class="container"
+      *ngFor="let item of books"
+    >
+      <div class="header">
+        <h3>{{ item.volumeInfo.title }}</h3>
+        <img [src]="item.volumeInfo.imageLinks.smallThumbnail" />
+      </div>
+      <br />
+      {{ item.volumeInfo.description }}<br />
+      <p>Written By:</p>
+      <p>{{ item.volumeInfo.publisher }}</p>
+    </mat-card>
   </div>
-
- 
-
 </div>
-
-

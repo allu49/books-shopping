@@ -1,0 +1,20 @@
+div {
+  .desc {
+    text-align: justify;
+    font-size: 15px;
+    font-weight: 3px;
+  }
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    img {
+      height: 60px;
+    }
+  }
+  mat-icon {
+    float: right;
+    color: #e75480;
+    cursor: pointer;
+  }
+}

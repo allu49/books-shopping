@@ -1,37 +1,62 @@
-div{
-    display: flex;
-    justify-content: center;
-    margin-top: 60px;
-mat-card{
-    height: 400 px;
+// div{
+//     display: flex;
+//     justify-content: center;
+//     margin-top: 60px;
+// mat-card{
+//     height: 400 px;
+//     width: 700px;
+//     .desc{
+//         text-align: justify;
+//         font-size: 15px;
+//         font-weight: 3px;
+//     }
+//   .header{
+//        display:flex;
+//        flex-direction: row;
+//        justify-content: space-between;
+//        img{
+//            height: 60px;
+//        }
+//    }
+//    .footer{
+//     display:flex;
+//     flex-direction: row;
+//     justify-content: flex-start;
+//     margin-top:10px;
+//     button{
+//         background-color: #e75480;
+//         color: white;
+//         margin-left:5px;
+//     }
+//     .buyButton{
+//         margin-left: 12px;
+//     }
+//    }
+
+// }
+// }
+
+div {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  mat-card {
+    height: fit-content;
     width: 700px;
-    .desc{
-        text-align: justify;
-        font-size: 15px;
-        font-weight: 3px;
-    }
-  .header{
-       display:flex;
-       flex-direction: row;
-       justify-content: space-between;
-       img{
-           height: 60px;
-       }
-   }
-   .footer{
-    display:flex;
+    border: 1px solid black;
+  }
+  .footer {
+    display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin-top:10px;
-    button{
-        background-color: #e75480;
-        color: white;
-        margin-left:5px;
+    margin-bottom: 10px;
+    button {
+      background-color: #e75480;
+      color: white;
+      margin-left: 5px;
     }
-    .buyButton{
-        margin-left: 12px;
+    .buyButton {
+      margin-left: 12px;
     }
-   }
-
-}
+  }
 }

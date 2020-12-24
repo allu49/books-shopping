@@ -1,13 +1,11 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CartComponent } from './cart.component';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { MaterialModule } from '../../material/material.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CartComponent } from './cart.component';
 
-const cartRoute:Routes=[
-  {path:'',component:CartComponent}
-]
+const cartRoute: Routes = [{ path: '', component: CartComponent }];
 
 @NgModule({
   declarations: [],
@@ -16,8 +14,8 @@ const cartRoute:Routes=[
     RouterModule.forChild(cartRoute),
     MaterialModule,
     FormsModule,
-     ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  exports:[RouterModule]
+  exports: [RouterModule],
 })
-export class CartModule { }
+export class CartModule {}

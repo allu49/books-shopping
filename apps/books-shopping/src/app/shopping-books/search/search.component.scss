@@ -1,40 +1,42 @@
-p{
-    text-align: center;
+p {
+  text-align: center;
 }
-mat-icon{
-    cursor: pointer;
+mat-icon {
+  cursor: pointer;
 }
-div{
-   
-.main{
+div {
+  display: flex;
+  flex-direction: column;
+
+  .main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    .container{
-    cursor: pointer;
-    width: 550px;
-    height: 250px;
-    overflow: hidden;
-    white-space: nowrap; 
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    margin: 5px 0px 5px;
-    text-align: justify;
-    font-size: 15px;
-    font-style: normal;
-    .header{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            img{
-                height: 60px; 
-            }
-    }
-    span{
+    .container {
+      cursor: pointer;
+      width: 550px;
+      height: 250px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin: 5px 0px 5px;
+      text-align: justify;
+      font-size: 15px;
+      font-style: normal;
+      .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        img {
+          height: 60px;
+        }
+      }
+      span {
         float: left;
+      }
     }
-}  
-}
+  }
 }

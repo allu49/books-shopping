@@ -1,43 +1,54 @@
 <div class="main">
-    <mat-card class="container">
-        <div>
-         BackGround Image
-        </div>
-        <form novalidate class="form" [formGroup]="billingForm" (ngSubmit)="onSubmit(billingForm)">
-            <h3>Billing Info</h3>
-            <mat-form-field class="form-group">
-              <mat-label>Your Name</mat-label>
-              <input matInput   formControlName="name" 
-              (blur)="blur()">
-              <mat-error  *ngIf="displayMessage.name">
-                {{displayMessage.name}}
-            </mat-error>
-            </mat-form-field>
-            <mat-form-field class="example-full-width">
-              <mat-label>Your Email</mat-label>
-              <input type="email" matInput   formControlName="email"
-              (blur)="blur()">
-              <mat-error  *ngIf="displayMessage.email">
-                {{displayMessage.email}}
-            </mat-error>
-            </mat-form-field>
-            <mat-form-field >
-                <mat-label>Your PhoneNumber</mat-label>
-                <input type="tel" matInput   formControlName="phoneNumber" (blur)="blur()" >
-                <mat-error class="invalid-feedback" *ngIf="displayMessage.phoneNumber">
-                    {{displayMessage.phoneNumber}}
-                </mat-error>
-              </mat-form-field>
-              <mat-form-field class="example-full-width">
-                <mat-label>Your  Address</mat-label>
-                <textarea matInput placeholder="address"  formControlName="address"  (blur)="blur()"></textarea>
-                <mat-error  *ngIf="displayMessage.address">
-                    {{displayMessage.address}}
-                </mat-error>
-              </mat-form-field>
-              <span>
-              <button mat-button matSuffix type="submit" >Submit</button>
-              </span>
-          </form>
-    </mat-card>
+  <mat-card class="container">
+    <div>BackGround Image</div>
+    <form
+      novalidate
+      class="form"
+      [formGroup]="billingForm"
+      (ngSubmit)="onSubmit(billingForm)"
+    >
+      <h3>Billing Info</h3>
+      <mat-form-field class="form-group">
+        <mat-label>Your Name</mat-label>
+        <input matInput formControlName="name" (blur)="blur()" />
+        <mat-error *ngIf="displayMessage.name">
+          {{ displayMessage?.name }}
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Your Email</mat-label>
+        <input type="email" matInput formControlName="email" (blur)="blur()" />
+        <mat-error *ngIf="displayMessage.email">
+          {{ displayMessage?.email }}
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Your PhoneNumber</mat-label>
+        <input
+          type="tel"
+          matInput
+          formControlName="phoneNumber"
+          (blur)="blur()"
+        />
+        <mat-error class="invalid-feedback" *ngIf="displayMessage.phoneNumber">
+          {{ displayMessage?.phoneNumber }}
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Your Address</mat-label>
+        <textarea
+          matInput
+          placeholder="address"
+          formControlName="address"
+          (blur)="blur()"
+        ></textarea>
+        <mat-error *ngIf="displayMessage.address">
+          {{ displayMessage?.address }}
+        </mat-error>
+      </mat-form-field>
+      <span>
+        <button mat-button matSuffix type="submit">Submit</button>
+      </span>
+    </form>
+  </mat-card>
 </div>

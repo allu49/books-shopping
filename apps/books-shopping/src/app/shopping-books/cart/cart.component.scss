@@ -1,41 +1,69 @@
-div{
-    display: flex;
-    flex-direction: column;
-    margin-top: 60px;
-mat-card{
+// div{
+//     display: flex;
+//     flex-direction: column;
+//     margin-top: 60px;
+// mat-card{
+//     height: 400 px;
+//     width: 700px;
+//     margin-top: 12px;
+//     margin-left: 100px;
+//     .desc{
+//         text-align: justify;
+//         font-size: 15px;
+//         font-weight: 3px;
+//     }
+//   .header{
+//        display:flex;
+//        flex-direction: row;
+//        justify-content: space-between;
+//        img{
+//            height: 60px;
+//        }
+//    }
+
+// }
+// .footer{
+//     display:flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     margin-top:15px;
+//     margin-left: 100px;
+//     .buyButton{
+//         background-color: #e75480;
+//         color: white;
+//     }
+// }
+// }
+// mat-icon{
+//     float: right;
+//     color:  #e75480 ;
+//     cursor: pointer;
+// }
+
+div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  mat-card {
     height: 400 px;
     width: 700px;
     margin-top: 12px;
     margin-left: 100px;
-    .desc{
-        text-align: justify;
-        font-size: 15px;
-        font-weight: 3px;
-    }
-  .header{
-       display:flex;
-       flex-direction: row;
-       justify-content: space-between;
-       img{
-           height: 60px;
-       }
-   }
-  
-}
-.footer{
-    display:flex;
+  }
+  .footer {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top:15px;
+    margin-top: 15px;
     margin-left: 100px;
-    .buyButton{
-        background-color: #e75480;
-        color: white;
+    .buyButton {
+      background-color: #e75480;
+      color: white;
     }
+  }
 }
-}
-mat-icon{
-    float: right;
-    color:  #e75480 ;
-    cursor: pointer;
+mat-icon {
+  float: right;
+  color: #e75480;
+  cursor: pointer;
 }

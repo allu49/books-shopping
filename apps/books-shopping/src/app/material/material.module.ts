@@ -9,8 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {MatDialogModule} from '@angular/material/dialog';
-
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [],
@@ -24,11 +23,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatInputModule,
     MatFormFieldModule,
     MatCardModule,
-    MatBadgeModule,MatDialogModule
-    
-    
+    MatBadgeModule,
+    MatDialogModule,
   ],
-  exports:[
+  exports: [
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
@@ -38,7 +36,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatFormFieldModule,
     MatCardModule,
     MatBadgeModule,
-    MatDialogModule
-  ]
+    MatDialogModule,
+  ],
 })
-export class MaterialModule { }
+export class MaterialModule {}

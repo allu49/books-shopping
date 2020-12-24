@@ -1,22 +1,20 @@
-div{
-    border: 1px solid black;
-  }
-  mat-toolbar{
-    background-color:#e75480;
-    color: white;
-  }
-  mat-sidenav-container{
-    height:500px;
-    mat-sidenav{
-        width: 190px;
-        mat-nav-list{
-            display: flex;
-            flex-direction: column;
-            mat-icon{
-                margin-right: 7px;
-            }         
-        }
+div {
+  border: 1px solid black;
+}
+mat-toolbar {
+  background-color: #e75480;
+  color: white;
+}
+mat-sidenav-container {
+  height: 500px;
+  mat-sidenav {
+    width: 190px;
+    mat-nav-list {
+      display: flex;
+      flex-direction: column;
+      mat-icon {
+        margin-right: 7px;
+      }
     }
-    
-    
   }
+}
